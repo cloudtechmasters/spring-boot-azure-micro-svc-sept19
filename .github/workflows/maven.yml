@@ -41,7 +41,7 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
     - name: Build the Docker image
       run: |
-        docker image build -t cloudtechmasters/spring-boot-azure-micro-svc-sept19:v1
+        docker image build -t cloudtechmasters/spring-boot-azure-micro-svc-sept19:v1 .
       
     - name: Docker Push
       run: |
