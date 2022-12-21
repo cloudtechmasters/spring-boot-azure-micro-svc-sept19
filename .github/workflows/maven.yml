@@ -9,6 +9,20 @@
 name: Java CI with Maven
 
 on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Nonprod FTB environment to deploy to, i.e. test/int/int2/stage'
+        required: true
+        default: 'test'
+      tags:
+        description: 'Single tag or comma-separated list of tags for conduit files'
+        required: true
+        default: '1.0.1'
+      dcr:
+        description: 'Number of ABC ticket - i.e. ABC-1234'
+        required: true
+        default: 'ABC-1234'
   push:
     branches: [ "master" ]
   pull_request:
