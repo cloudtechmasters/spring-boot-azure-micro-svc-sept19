@@ -23,6 +23,10 @@ on:
         description: 'Number of ABC ticket - i.e. ABC-1234'
         required: true
         default: 'ABC-1234'
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
   build:
